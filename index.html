@@ -8,9 +8,14 @@
     <link rel="stylesheet" src="style.css">
 </head>
 <body>
-    <script src="index.js"></script>
     <label id="label1">Check this button out!</label><br>
     <button type="button" id="button1">BUTTON</button><br>
     <label id="label2">You pressed the button 0 times!</label>
+    <script src="index.js"></script>
+    <form>
+        <input placeholder="text" name="element" hidden> </input>
+        <input type="button" value="Click Me" onclick="add(document.forms[0].element.value)"/>
+        <span id="textId">&nbsp;</span>
+    </form>
 </body>
 </html>
