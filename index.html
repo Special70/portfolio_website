@@ -8,7 +8,10 @@
     <link rel="stylesheet" src="style.css">
     <style>
         @import url('https://fonts.cdnfonts.com/css/minecraft-4');
-        * {font-family: 'Minecraft', sans-serif}
+        * {
+            font-family: 'Minecraft', sans-serif;
+            color:darkorange;
+        }
         #Header1Text {text-align: center;}
 
         #MainWebsiteHeader {text-align: center; font-family: 'Minecraft', sans-serif}
@@ -16,27 +19,46 @@
             display: flex;
             justify-content: center;
         }
+        #EI-TEXT {
+            color:red;
+        }
+        #EB-TEXT {
+            color:#35DE26;
+        }
+        #EE-TEXT {
+            color:#ED53E0;
+        }
         .SsomarPlugins_EI {
             margin: 0 30px;
             position: relative;
         }
-            .SsomarPlugins_EI-HoverText {
+/*            .SsomarPlugins_EI-HoverText {
                 display: none;
                 text-align: center;
             }
             .SsomarPlugins_EI:hover .SsomarPlugins_EI-HoverText {
                 display: block
             }
+            */
         .SsomarPlugins_EB {
             margin: 0 30px;
         }
         .SsomarPlugins_EE {
             margin: 0 30px;
         }
+
+        .TextContainer {
+            display: flex;
+            justify-content: center;
+        }
+        .TextSpan {
+            margin: 0 20px;
+        }
+
         
     </style>
 </head>
-<body>
+<body background="https://upload.wikimedia.org/wikipedia/commons/7/71/Black.png">
     <hr>
     <h1 id="MainWebsiteHeader">Main Website</h1>
     <h2 id="Header1Text">
@@ -48,12 +70,19 @@
     <hr>
     <h2 id="Header1Text">Web Editors for Ssomar's plugins</h2>
     <div class="SsomarPlugins_Container">
-        <span class="SsomarPlugins_EI"><a href="\item config editors\executableitems_editor.html">ExecutableItems</a></span>
-            <span class="SsomarPlugins_EI-HoverText">waa</span>
-        <span class="SsomarPlugins_EB"></span><a href="\item config editors\executableitems_editor.html">ExecutableBlocks</a></span>
-        <span class="SsomarPlugins_EE"></span><a href="\item config editors\executableitems_editor.html">ExecutableEvents</a></span>
+        <span class="SsomarPlugins_EI"><a href="\item config editors\executableitems_editor.html" id="EI-TEXT">ExecutableItems</a></span>
+<!--           <span class="SsomarPlugins_EI-HoverText">waa</span> -->
+        <span class="SsomarPlugins_EB"></span><a href="\item config editors\executableblocks_editor.html" id="EB-TEXT">ExecutableBlocks</a></span>
+        <span class="SsomarPlugins_EE"></span><a href="\item config editors\executableevents_editor.html" id="EE-TEXT">ExecutableEvents</a></span>
     </div>
 
+    <hr>
+    <h2 id="Header1Text">Test Websites</h2>
+    <div class="TextContainer">
+        <span class="TextSpan">
+            <a href="\test sites\test.html">Testing Website</a>
+        </span>
+    </div>
 
 </body>
 </html>
