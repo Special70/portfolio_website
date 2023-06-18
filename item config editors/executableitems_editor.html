@@ -9,10 +9,39 @@
         @import url('https://fonts.cdnfonts.com/css/minecraft-4');
         * {font-family: 'Minecraft', sans-serif}
         #TopHeader {text-align: center;}
+
+        .forLoopBox {
+            border: 2px solid darkorange;
+            margin: 5px;
+            background-color: black;
+            width: 450px;
+            padding: 10px
+        }
+        .forLoopBoxText {
+            color: darkorange;
+            text-align: center;
+        }
+        .forLoopBoxTextBody {
+            color: darkorange;      
+            text-align: right; 
+        }
     </style>
 </head>
 <body>
-    <h1 id="TopHeader">ExecutableItems Editor</h1><br>
-    <a href="../index.html" id="MinecraftFont">Go back</a>
+    <h1 id="TopHeader">ExecutableItems Editor</h1>
+    <a href="../index.html" id="MinecraftFont">Go back</a><br>
+    <br>
+    <div class="forLoopBox">
+        <div class="forLoopBoxText">
+            For Loop<br>
+        </div>
+        <div class="forLoopBoxTextBody">
+            Start Value: <input type="text" id="ForLoop_StartValue"><br>
+            Increment: <input type="text" id="ForLoop_Increment"><br>
+            Increment Amount: <input type="text" id="ForLoop_IncrementAmount"><br>
+
+
+        </div>
+    </div>
 </body>
 </html>
