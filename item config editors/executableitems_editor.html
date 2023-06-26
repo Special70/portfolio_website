@@ -45,6 +45,25 @@
             width: 100%;
         }
 
+        /*---------------------------------------------------------------------------*/
+        
+        .ForLoopStartValue {
+            position: relative;
+            display: inline-block;
+
+        }
+
+        .ForLoopStartValue_Text {
+            visibility: hidden;
+            position: absolute;
+            z-index: 1;
+            background-color: black;
+            border: 2px solid darkorange;;
+        }
+
+        .ForLoopStartValue:hover .ForLoopStartValue_Text {
+            visibility: visible;
+        }
     </style>
 </head>
 <body background="https://upload.wikimedia.org/wikipedia/commons/7/71/Black.png">
@@ -56,7 +75,11 @@
             For Loop<br>
         </div>
         <div class="forLoopBoxTextBody">
-            Start Value: <input type="text" id="ForLoop_StartValue"><br>
+            <div class="ForLoopStartValue">
+              Start Value: <input type="text" id="ForLoop_StartValue">
+              <span class="ForLoopStartValue_Text">This is where you will type the first element of your for loop.</span>
+              
+            </div><br>
             Increment Value: <input type="text" id="ForLoop_IncrementValue"><br>
             Increment Amount: <input type="number" id="ForLoop_IncrementAmount"><br>
             <button type="button" id="forLoopButton">Enter</button>
