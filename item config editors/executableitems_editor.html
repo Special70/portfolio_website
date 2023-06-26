@@ -8,14 +8,20 @@
     <style>
         @import url('https://fonts.cdnfonts.com/css/minecraft-4');
         * {font-family: 'Minecraft', sans-serif}
-        #TopHeader {text-align: center;}
+        #TopHeader {
+            text-align: center;
+            color: darkorange;
+        }
+        a {
+            color: darkorange;
+        }
 
         .forLoopBox {
             border: 2px solid darkorange;
-            margin: 5px;
+            margin: 0.5%;
             background-color: black;
-            width: 450px;
-            padding: 10px
+            width: 40%;
+            padding: 1%;
         }
         .forLoopBoxText {
             color: darkorange;
@@ -25,9 +31,23 @@
             color: darkorange;      
             text-align: right; 
         }
+        .forLoopBoxTextBodyLower {
+            color: darkorange;      
+            text-align: left; 
+        }
+        .forLoopBoxTextBody_BoxLower {
+            border: 2px solid darkorange;
+            margin: 3px;
+            background-color: white;
+        }
+
+        .forLoop_textArea {
+            width: 100%;
+        }
+
     </style>
 </head>
-<body>
+<body background="https://upload.wikimedia.org/wikipedia/commons/7/71/Black.png">
     <h1 id="TopHeader">ExecutableItems Editor</h1>
     <a href="../index.html" id="MinecraftFont">Go back</a><br>
     <br>
@@ -37,11 +57,18 @@
         </div>
         <div class="forLoopBoxTextBody">
             Start Value: <input type="text" id="ForLoop_StartValue"><br>
-            Increment: <input type="text" id="ForLoop_Increment"><br>
-            Increment Amount: <input type="text" id="ForLoop_IncrementAmount"><br>
-
-
+            Increment Value: <input type="text" id="ForLoop_IncrementValue"><br>
+            Increment Amount: <input type="number" id="ForLoop_IncrementAmount"><br>
+            <button type="button" id="forLoopButton">Enter</button>
+        </div>
+        <br>
+        <div class="forLoopBoxTextBodyLower">
+            Output: <br>
+        </div>
+        <div class="forLoopBoxTextBody_BoxLower">
+            <textarea class="forLoop_textArea" id="forLoop_textArea" rows="10"></textarea>
         </div>
     </div>
+    <script src="executableitems.js"></script>
 </body>
 </html>
