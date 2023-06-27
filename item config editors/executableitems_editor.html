@@ -6,17 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        @import url('https://fonts.cdnfonts.com/css/minecraft-4');
-        * {font-family: 'Minecraft', sans-serif}
-        #TopHeader {
-            text-align: center;
-            color: darkorange;
-        }
-        a {
-            color: darkorange;
+        @import url('https://fontlibrary.org//face/minecraftia');
+        * {
+            font-family: 'MinecraftiaRegular';
+            font-weight: normal;
+            font-style: normal;
         }
 
-        .forLoopBox {
+        .frameBox {
             border: 2px solid darkorange;
             margin: 0.5%;
             background-color: black;
@@ -45,12 +42,13 @@
             width: 100%;
         }
 
-        /*---------------------------------------------------------------------------*/
+        /*=========================================================================*/
+        /*=========================================================================*/
+        /*=========================================================================*/
         
         .ForLoopStartValue {
             position: relative;
             display: inline-block;
-
         }
 
         .ForLoopStartValue_Text {
@@ -58,40 +56,156 @@
             position: absolute;
             z-index: 1;
             background-color: black;
-            border: 2px solid darkorange;;
+            border: 2px solid darkorange;
+            margin: 2%;
+            width: 120%;
+            text-align: left;
+            font-size: 100%;
         }
 
         .ForLoopStartValue:hover .ForLoopStartValue_Text {
             visibility: visible;
         }
+        /*---------------------------------------------------------------------------*/
+        .ForLoopIncrementValue {
+            position: relative;
+            display: inline-block;
+        }
+
+        .ForLoopIncrementValue_Text {
+            visibility: hidden;
+            position: absolute;
+            z-index: 1;
+            background-color: black;
+            border: 2px solid darkorange;
+            margin: 2%;
+            width: 120%;
+            text-align: left;
+            font-size: 100%;
+        }
+
+        .ForLoopIncrementValue:hover .ForLoopIncrementValue_Text {
+            visibility: visible;
+        }
+        /*---------------------------------------------------------------------------*/
+        .ForLoopIncrementAmount {
+            position: relative;
+            display: inline-block;
+        }
+
+        .ForLoopIncrementAmount_Text {
+            visibility: hidden;
+            position: absolute;
+            z-index: 1;
+            background-color: black;
+            border: 2px solid darkorange;
+            margin: 2%;
+            width: 120%;
+            text-align: left;
+            font-size: 100%;
+        }
+
+        .ForLoopIncrementAmount:hover .ForLoopIncrementAmount_Text {
+            visibility: visible;
+        }
     </style>
 </head>
 <body background="https://upload.wikimedia.org/wikipedia/commons/7/71/Black.png">
-    <h1 id="TopHeader">ExecutableItems Editor</h1>
-    <a href="../index.html" id="MinecraftFont">Go back</a><br>
+    <h1 style="text-align: center; color: darkorange;">ExecutableItems Editor</h1>
+    <a href="../index.html" style="color:darkorange">Go back</a><br>
     <br>
-    <div class="forLoopBox">
-        <div class="forLoopBoxText">
+    <div style="color:darkorange">
+        
+        Command Setup Tools
+    </div>
+    <br>
+    <div class="frameBox">
+        <div style="
+        color: darkorange;
+        text-align: center;">
             For Loop<br>
         </div>
         <div class="forLoopBoxTextBody">
             <div class="ForLoopStartValue">
               Start Value: <input type="text" id="ForLoop_StartValue">
-              <span class="ForLoopStartValue_Text">This is where you will type the first element of your for loop.</span>
-              
+              <span class="ForLoopStartValue_Text">
+                This is where you will be inputting the<br>
+                first value of your for loop.
+              </span>
             </div><br>
-            Increment Value: <input type="text" id="ForLoop_IncrementValue"><br>
-            Increment Amount: <input type="number" id="ForLoop_IncrementAmount"><br>
+            <div class="ForLoopIncrementValue">
+              Increment Value: <input type="text" id="ForLoop_IncrementValue">
+              <span class="ForLoopIncrementValue_Text">
+                This is where you will be inputting the<br>
+                increasing amount. If the Start Value or<br>
+                the Increment Value has one non-numerical<br>
+                character, the letters stack instead.<br>
+              </span>
+            </div><br>
+            <div class="ForLoopIncrementAmount">
+              Increment Amount: <input type="number" id="ForLoop_IncrementAmount">
+              <span class="ForLoopIncrementAmount_Text">
+                This is where you will be inputting the<br>
+                amount of elements you would want in your<br>
+                FOR loop. Typing 0 will give you a blank<br>
+                FOR loop. Typing 3 will give you a FOR<br>
+                loop with 3 elements in it.
+              </span>
+            </div><br>
             <button type="button" id="forLoopButton">Enter</button>
         </div>
         <br>
         <div class="forLoopBoxTextBodyLower">
             Output: <br>
         </div>
-        <div class="forLoopBoxTextBody_BoxLower">
-            <textarea class="forLoop_textArea" id="forLoop_textArea" rows="10"></textarea>
+            <textarea class="forLoop_textArea" id="forLoop_textArea" rows="10" style="
+            border: 2px solid darkorange;
+            margin: 3px;
+            background-color: white;
+            resize: none;"
+            ></textarea>
+    </div>
+
+    
+    <script src="JS-executableitems_forloop.js"></script>
+    <!----------------------------------------------------------------------------------------------------------------------------->
+    <div class="frameBox">
+        <div style="
+          color:darkorange; 
+          text-align: center; 
+        ">
+            Circle Offset Creator
+        </div>
+        <div style="text-align: right; color: darkorange">
+            Radius:<input type="number" id="CircleRadius"><br>
+            Rate:<input type="number" id="CircleRate"><br>
+            Symbol X:<input type="text" id="CircleSymbolX" maxlength="1"><br>
+            Symbol Y:<input type="text" id="CircleSymbolY" maxlength="1"><br>
+            <div style="text-align: left">
+              Symbol Bin: ⨳ ⩩ ⌭<br>
+              Command:<br>
+              <textarea style="width: 100%; border: solid 2px darkorange; resize: none"></textarea><br>
+              <button id="CircleDownloadButton" onclick="downloadCirclePlot()">Download File</button>
+            </div>
         </div>
     </div>
-    <script src="executableitems.js"></script>
+
+    <script src="JS-executableitems_circleplot.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
