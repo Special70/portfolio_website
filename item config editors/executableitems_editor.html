@@ -108,6 +108,8 @@
         .ForLoopIncrementAmount:hover .ForLoopIncrementAmount_Text {
             visibility: visible;
         }
+
+        #CircleRefreshButton, #TextBesidesCopyButton {display: inline-block;}
     </style>
 </head>
 <body background="https://upload.wikimedia.org/wikipedia/commons/7/71/Black.png">
@@ -181,14 +183,17 @@
             Rate:<input type="number" id="CircleRate"><br>
             Symbol X:<input type="text" id="CircleSymbolX" maxlength="1"><br>
             Symbol Y:<input type="text" id="CircleSymbolY" maxlength="1"><br>
+            Symbol Y Extra Value:<input type="number" id="CircleSymbolY-Add"><br>
             <div style="text-align: left">
               Symbol Bin: ⨳ ⩩ ⌭<br>
               Command:<br>
               <textarea style="width: 100%; border: solid 2px darkorange; resize: none" id="CircleCommandBox"></textarea><br>
+              For Loop:<br>
+              <textarea style="width: 100%; border: solid 2px darkorange; resize: none" id="CircleForLoopBox"></textarea><br>
               Output:<br>
-              <textarea style="width: 100%; border: solid 2px darkorange; resize: none" id="CircleOutputBox"></textarea><br>
+              <textarea style="width: 100%; border: solid 2px darkorange; resize: none" id="CircleOutputBox" rows="10"></textarea><br>
               <button id="CircleRefreshButton" onclick="refreshButton()">Refresh</button><br>
-              <button id="CircleDownloadButton" onclick="downloadCirclePlot()">Download File</button>
+              <button id="CircleRefreshButton" onclick="copyToClipBoard()">Copy</button><div id="TextBesidesCopyButton"></div><br>
             </div>
         </div>
     </div>

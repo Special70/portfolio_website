@@ -3,20 +3,45 @@ function refreshButton() {
     let circleRate = document.getElementById("CircleRate").value;
     let circleSymbolX = document.getElementById("CircleSymbolX").value;
     let circleSymbolY = document.getElementById("CircleSymbolY").value;
+    let circleSymbolYExtraValue = parseInt(document.getElementById("CircleSymbolY-Add").value);
     let circleCommand = document.getElementById("CircleCommandBox").value;
 
-    let symbolX_Regex = new RegExp(circleSymbolX, "g"); 
-    let displayCommand = circleCommand.replace(symbolX_Regex, "");
-    document.getElementById("CircleOutputBox").innerHTML = displayCommand;
-    console.log(displayCommand+" | "+circleSymbolX);
+    let symbolX_Regex = new RegExp(circleSymbolX, ""); 
+    let symbolY_Regex = new RegExp(circleSymbolY, ""); 
+
+    // Erases the output box when pressing the refersh button again
+    document.getElementById("CircleOutputBox").innerHTML = "";
+
+    // Computes the degrees value of each rate (particle point)
+    let rateCounter = Math.round(100*(360/circleRate))/100;
+    let rateArray = [];
+    if (!(circleRate == "")) {
+        let degreesValue = 0;
+        for (let i = 0; i < 360; i+=rateCounter) {
+        degreesValue += rateCounter;
+
+        rateArray.push(degreesValue);
+
+        let xOffset = (circleRadius*Math.sin(degreesValue*-1)*Math.cos(0*-1));
+        let yOffset = ((circleRadius*Math.cos(degreesValue*-1)*Math.cos(0*-1))+circleSymbolYExtraValue);
+        
+        let displayCommand = circleCommand.replace(symbolX_Regex, xOffset).replace(symbolY_Regex, yOffset);
+        document.getElementById("CircleOutputBox").innerHTML += displayCommand+"\n";
+        }
+    }
+    // For the For Loop Box of the Circle Offset Creator
+    document.getElementById("CircleForLoopBox").innerHTML = "FOR ["+rateArray+"] > for1";
+    //-----------------------------------------------------------------------------------------------//
+
+    
 }
 
-function downloadCirclePlot() {
-    var textToSave = "This is the text to be inserted into the file.";
-    var filename = "circle-plot-file.txt";
+function copyToClipBoard() {
+    document.getElementById("TextBesidesCopyButton").innerHTML = "  Copied!";
 
-    // "a" is used to simulate a file download and the rest are for downloading properties
-    var element = document.createElement("a");
-    element.setAttribute("href", "data:text/plain;charset=utf-8,");
-    element.setAttribute("download", filename);
+    const circleOutputBox = document.getElementById("CircleOutputBox");
+    circleOutputBox.select();
+    circleOutputBox.setSelectionRange(0, circleOutputBox.value.length);
+    document.execCommand('copy');
+    circleOutputBox.blur;
 }
