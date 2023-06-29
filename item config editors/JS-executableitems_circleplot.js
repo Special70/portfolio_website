@@ -3,7 +3,7 @@ function refreshButton() {
     let circleRate = document.getElementById("CircleRate").value;
     let circleSymbolX = document.getElementById("CircleSymbolX").value;
     let circleSymbolY = document.getElementById("CircleSymbolY").value;
-    let circleSymbolYExtraValue = document.getElementById("CircleSymbolY-Add").value;
+    let circleSymbolYExtraValue = parseFloat(document.getElementById("CircleSymbolY-Add").value);
     let circleCommand = document.getElementById("CircleCommandBox").value;
 
     let symbolX_Regex = new RegExp(circleSymbolX, ""); 
