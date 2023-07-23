@@ -201,13 +201,17 @@
     <script src="JS-executableitems_circleplot.js"></script> 
 
 
-    <div class="frameBox">
+    <div class="frameBox" id="frameBox">
         <div style="color: darkorange; text-align: center">
             RANDOM RUN creator
         </div>
+        <br>
         <div id="RandomRunFrame">
-            <button id="RandomRun-ADD-CMD-FIELD">Test</button>
-            <br>
+            <button id="RandomRun-ADD-CMD-FIELD" onclick="createNewTextArea()" style="border: solid 2px darkorange; resize: none">Create New CMD Field</button><br>
+        </div>
+        <div style="color: darkorange">
+            Output:<br>
+            <textarea style="width: 100%; border: solid 2px darkorange; resize: none"></textarea><br>
         </div>
     </div>
 
