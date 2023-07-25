@@ -28,7 +28,7 @@ forLoopButton.addEventListener("click", function() {
 //----------------------------------------------------------------------------------------------------------------
 const ForLoop_IncrementAmount = document.getElementById("ForLoop_IncrementAmount");
 
-ForLoop_IncrementAmount.addEventListener("click", function(event) {
+ForLoop_IncrementAmount.addEventListener("click", function() {
     let incrementAmount = parseInt(document.getElementById("ForLoop_IncrementAmount").value);
     if (incrementAmount <= 0) {
         document.getElementById("ForLoop_IncrementAmount").value = 0;

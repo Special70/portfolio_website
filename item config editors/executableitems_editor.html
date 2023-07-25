@@ -211,7 +211,10 @@
         </div>
         <div style="color: darkorange">
             Output:<br>
-            <textarea style="width: 100%; border: solid 2px darkorange; resize: none"></textarea><br>
+            <textarea style="width: 100%; border: solid 2px darkorange; resize: none;" rows="10" id="RandomRun-TextArea"></textarea><br>
+            <button id="RandomRun-ReloadOutput" onclick="reloadOutputBox()">Reload</button>
+            <button id="RandomRun-ReadjustRNG" onclick="readjustRNG()">Re-adjust RNG</button>
+            <button id="RandomRun-ResetAllRNG" onclick="resetAllRNG()">Reset All RNG</button>
         </div>
     </div>
 
