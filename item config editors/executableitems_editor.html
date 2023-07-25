@@ -119,9 +119,15 @@
     <div style="color:darkorange">
         
         Command Setup Tools
+        <br>
+    <div style="text-align: center;">
+        <button onclick="toggleDivs(1)">FOR LOOP</button>
+        <button onclick="toggleDivs(2)">CIRCLE OFFSET CREATOR</button>
+        <button onclick="toggleDivs(3)">RANDOM RUN CREATOR</button>
+    </div>
     </div>
     <br>
-    <div class="frameBox">
+    <div class="frameBox" id="FOR-LOOP-CREATOR" style=" display: none">
         <div style="
         color: darkorange;
         text-align: center;">
@@ -171,7 +177,7 @@
     
     <script src="JS-executableitems_forloop.js"></script>
     <!----------------------------------------------------------------------------------------------------------------------------->
-    <div class="frameBox">
+    <div class="frameBox" id="CIRCLE-OFFSET-CREATOR" style=" display: none">
         <div style="
           color:darkorange; 
           text-align: center; 
@@ -201,8 +207,9 @@
     <script src="JS-executableitems_circleplot.js"></script> 
 
 
-    <div class="frameBox" id="frameBox">
-        <div style="color: darkorange; text-align: center">
+    <!----------------------------------------------------------------------------------------------------------------------------->
+    <div class="frameBox" id="RANDOM-RUN-CREATOR" style="display: none;">
+        <div style="color: darkorange; text-align: center;">
             RANDOM RUN creator
         </div>
         <br>
@@ -223,6 +230,7 @@
 
 
 
+    <script src="JS-executableitems-main.js"></script>
 
 
 
