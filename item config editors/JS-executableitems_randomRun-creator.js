@@ -8,7 +8,7 @@ let stringArray = [];
 
 let longestDecimalLength = 0;
 
-const frameBoxVar = document.getElementById("frameBox");
+const frameBoxVar = document.getElementById("RANDOM-RUN-CREATOR");
 const randomRunFrameVar = document.getElementById("RandomRunFrame");
 
 document.body.onload = createNewTextArea()
