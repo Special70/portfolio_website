@@ -1,0 +1,105 @@
+
+@import url('https://fontlibrary.org//face/minecraftia');
+* {
+    font-family: 'MinecraftiaRegular';
+    font-weight: normal;
+    font-style: normal;
+}
+.frameBox {
+    border: 2px solid darkorange;
+    margin: 0.5%;
+    background-color: black;
+    width: 40%;
+    padding: 1%;
+    margin: auto;
+}
+.forLoopBoxText {
+    color: darkorange;
+    text-align: center;
+}
+.forLoopBoxTextBody {
+    color: darkorange;      
+    text-align: right; 
+}
+.forLoopBoxTextBodyLower {
+    color: darkorange;      
+    text-align: left; 
+}
+.forLoopBoxTextBody_BoxLower {
+    border: 2px solid darkorange;
+    margin: 3px;
+    background-color: white;
+}
+
+.forLoop_textArea {
+    width: 100%;
+}
+
+/*=========================================================================*/
+/*=========================================================================*/
+/*=========================================================================*/
+
+.ForLoopStartValue {
+    position: relative;
+    display: inline-block;
+}
+
+.ForLoopStartValue_Text {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    background-color: black;
+    border: 2px solid darkorange;
+    margin: 2%;
+    width: 120%;
+    text-align: left;
+    font-size: 100%;
+}
+
+.ForLoopStartValue:hover .ForLoopStartValue_Text {
+    visibility: visible;
+}
+/*---------------------------------------------------------------------------*/
+.ForLoopIncrementValue {
+    position: relative;
+    display: inline-block;
+}
+
+.ForLoopIncrementValue_Text {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    background-color: black;
+    border: 2px solid darkorange;
+    margin: 2%;
+    width: 120%;
+    text-align: left;
+    font-size: 100%;
+}
+
+.ForLoopIncrementValue:hover .ForLoopIncrementValue_Text {
+    visibility: visible;
+}
+/*---------------------------------------------------------------------------*/
+.ForLoopIncrementAmount {
+    position: relative;
+    display: inline-block;
+}
+
+.ForLoopIncrementAmount_Text {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    background-color: black;
+    border: 2px solid darkorange;
+    margin: 2%;
+    width: 120%;
+    text-align: left;
+    font-size: 100%;
+}
+
+.ForLoopIncrementAmount:hover .ForLoopIncrementAmount_Text {
+    visibility: visible;
+}
+
+#CircleRefreshButton, #TextBesidesCopyButton {display: inline-block;}
