@@ -7,12 +7,6 @@ forLoopButton.addEventListener("click", function() {
     let incrementValue = document.getElementById("ForLoop_IncrementValue").value;
     let incrementAmount = document.getElementById("ForLoop_IncrementAmount").value;
 
-    /*
-    if (numberRegex.test(startValue) && numberRegex.test(incrementValue)) {
-        startValue = parseInt(startValue);
-        incrementValue = parseInt(incrementValue);
-    }
-    */
     try {
         startValue = parseFloat(startValue);
         incrementValue = parseFloat(incrementValue);
