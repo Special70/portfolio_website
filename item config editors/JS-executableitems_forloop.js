@@ -7,19 +7,14 @@ forLoopButton.addEventListener("click", function() {
     let incrementValue = document.getElementById("ForLoop_IncrementValue").value;
     let incrementAmount = document.getElementById("ForLoop_IncrementAmount").value;
 
-    try {
-        startValue = parseFloat(startValue);
-        incrementValue = parseFloat(incrementValue);
-    }
-    catch (err) {
-
-    }
+    startValue = parseFloat(startValue);
+    incrementValue = parseFloat(incrementValue);
 
     let loopValue = (startValue);
     let forLoopArray = [];
 
     for (let i = 0; i < incrementAmount; i++) {
-        forLoopArray.push(loopValue+" ");
+        forLoopArray.push(parseFloat(loopValue).toFixed(3)+" ");
         loopValue+=incrementValue;
     }
 
