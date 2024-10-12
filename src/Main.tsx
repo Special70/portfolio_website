@@ -7,11 +7,11 @@ import './styles/ssomar-plugins-tools.css'
 import { Home } from './pages/Home';
 import { SsomarPluginsTools } from './pages/ssomar-plugins-tools/SsomarPluginsTools'
 
-import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import {HashRouter, Route, Routes} from 'react-router-dom'
 import { Error404_Page } from './pages/Error404_Page';
 import { SCore_Editor } from './pages/ssomar-plugins-tools/SCore_Editor';
 import MyComponent from './Test';
-
+/*
 const router = createBrowserRouter([{
   path: '/',
   element: <Home />,
@@ -31,9 +31,18 @@ const router = createBrowserRouter([{
 }
 
 ]);
+*/
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+  <HashRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/ssomar-tools" element={<SsomarPluginsTools />} />
+      <Route path="/ssomar-tools/score" element={<SCore_Editor />} />
+      <Route path="/test" element={<MyComponent />} />
+      <Route path="*" element={<Error404_Page />} />
+    </Routes>
+  </HashRouter>
   </StrictMode>,
 )
