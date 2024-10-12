@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+@font-face {
+  font-family: "minecraft";
+  src: url("../fonts/minecraft.ttf");
+}
+@font-face {
+  font-family: "open-sans";
+  src: url("../fonts/open-sans.ttf");
+}
+}
