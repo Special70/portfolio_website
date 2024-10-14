@@ -6,18 +6,15 @@ import { SCore_Editor_ButtonManager } from './SCore_Editor_ButtonManager'
 
 import backgroundImage from '../../assets/images/ssomar-tools-website_main_background-image.png'
 
-type CurrentTool = {
-    type: string
-}
 
 type CurrentToolContextType = { // Context Type
-    currentToolMenu: CurrentTool | null
-    setCurrentToolMenu: React.Dispatch<React.SetStateAction<CurrentTool | null>>
+    currentToolMenu: string | null
+    setCurrentToolMenu: React.Dispatch<React.SetStateAction<string | null>>
 }
 
 export const CurrentTooolContext = createContext({} as CurrentToolContextType) // For sharing the information across child components
 export const SCore_Editor = () => {
-    const [currentToolMenu, setCurrentToolMenu] = useState<CurrentTool | null>(null)
+    const [currentToolMenu, setCurrentToolMenu] = useState<string | null>(null)
 
     return (
         <CurrentTooolContext.Provider value={{currentToolMenu, setCurrentToolMenu}}>

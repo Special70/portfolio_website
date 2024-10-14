@@ -7,7 +7,8 @@ module.exports = {
     extend: {
       screens: {
         'viewport<=910px': {max: '910px'},
-        'viewport<=1000px': {max: '1000px'}
+        'viewport<=1000px': {max: '1000px'},
+        'viewport>1000px': {min: '1001px'}
       },
       width : {
         '910px': '910px'

@@ -10,8 +10,7 @@ export const SCore_Editor_Interface = () => {
     const currentToolToDisplay = useContext(CurrentTooolContext)
 
     function displayMenu() {
-        console.log(currentToolToDisplay.currentToolMenu?.type)
-        switch(currentToolToDisplay.currentToolMenu?.type) {
+        switch(currentToolToDisplay.currentToolMenu) {
             case "0": return <RandomRun />
             
             default: {
