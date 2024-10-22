@@ -38,17 +38,19 @@ export const RandomRun = () => {
     // Usually called by the CommandInputBox component so when it re-renders, it just not renders the "deleted" component
     function deleteBox(id: number) {
         const targetIndex = inputBoxIdList.indexOf(id)
-        setInputBoxIdListValues(
-            [...inputBoxIdList.splice(0, targetIndex), ...inputBoxIdList.splice(targetIndex)]
-        )
-        const newRateValues: any = rateValues?.map((val) => {return (val)})
-        setRateValues(
-            [...newRateValues.splice(0, targetIndex), ...newRateValues.splice(targetIndex)]
-        )
-        const newCommandValues: any = commandValues?.map((val) => {return (val)})
-        setCommandValues(
-            [...newCommandValues.splice(0, targetIndex), ...newCommandValues.splice(targetIndex)]
-        )
+        
+        setInputBoxIdListValues( removeItem(inputBoxIdList ,targetIndex) )
+        setRateValues( removeItem(rateValues ,targetIndex) )
+        setCommandValues( removeItem(commandValues ,targetIndex) )
+    }
+
+    function removeItem(array: any, indexToDelete: number) {
+        let newArray = []
+        for (let i = 0; i < array.length; i++) {
+            if (i == indexToDelete) {continue}
+            newArray.push(array[i])
+        }
+        return newArray
     }
 
     function addBox() {
@@ -71,27 +73,39 @@ export const RandomRun = () => {
     }
     
     const OutputFormatter_RandomRun = () => {
+        // Main variable for building the desired text to print
         let mainReturnTextBuilder = ""
         
-        inputBoxIdList?.map((index) => {
+        inputBoxIdList?.map((obj, index) => {
+            // To make the compiler shut up when building the app
+            obj // I am not skilled enough to know how to just get the frkn index while leave the obj var unused
+
+            // Creates the text for building a command section for this input box
             let returnTextBuilder = ""
-            const inputRate: number = rateValues == null ? 0 : rateValues[index]
-            const inputCommand: string = commandValues == null ? "" : commandValues[index]
+            // Grabs the rate value from the correct input box
+            const inputRate: number = rateValues == undefined ? 0 : rateValues[index]
+            // Grabs the command value from the correct command box
+            const inputCommand: string = commandValues == undefined ? "" : commandValues[index]
+            // Uses an array to easily "design" the text to print
             const returnText = [
                 `    - 'RANDOM RUN: ${inputRate}'\n`,
                 `    - ${inputCommand}\n`,
                 `    - RANDOM END\n`
             ]
-
+            // Starts building the text
             for (let i = 0; i < returnText.length; i++) {
                 returnTextBuilder += returnText[i]
             }
-            if (inputCommand.length == 0) {
+            
+            // Prevents text building if command field is blank
+            if (inputCommand.length <= 0) {
                 return
-            } else {mainReturnTextBuilder += returnTextBuilder}
+            }
+            // Adds the finished text to the main text variable
+            mainReturnTextBuilder += returnTextBuilder
             
         })
-
+        // Returns the finished product
         return (mainReturnTextBuilder)
         
     }
