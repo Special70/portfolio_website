@@ -6,21 +6,22 @@ import { SCore_Editor_ButtonManager } from './SCore_Editor_ButtonManager'
 
 import backgroundImage from '../../assets/images/ssomar-tools-website_main_background-image.png'
 
-
-type CurrentToolContextType = { // Context Type
-    currentToolMenu: string | null
-    setCurrentToolMenu: React.Dispatch<React.SetStateAction<string | null>>
+// This context type is mainly for knowing which menu got selected and to share the useState to other components inside the context provider tag
+type CurrentToolContextType = { 
+    currentToolMenu: string | null // Stores the "id" of the selected button
+    setCurrentToolMenu: React.Dispatch<React.SetStateAction<string | null>> // Stores the useState function for the other components to use
 }
 
 export const CurrentTooolContext = createContext({} as CurrentToolContextType) // For sharing the information across child components
 export const SCore_Editor = () => {
+    // useState for modifying what current tool menu would it be (IF POSSIBLE, ADD RESTRICTIONS TO WHAT VALUES IT COULD HAVE. MAKE IT BASED ON THE buttonList variable of SCore_Editor_ButtonManager.tsx)
     const [currentToolMenu, setCurrentToolMenu] = useState<string | null>(null)
 
     return (
         <CurrentTooolContext.Provider value={{currentToolMenu, setCurrentToolMenu}}>
         
         <div className="w-1/8 fixed ml-5 h-screen"> {/*mainly used to be able to properly place the back button*/}
-            <div className="bottom-24 absolute w-36 text-center border-8 border-blue-950 font-minecraft text-5xl bg-gray-700 ">
+            <div className="bottom-24 absolute w-36 text-center border-8 border-blue-950 font-minecraft text-5xl bg-blue-200 ">
                 <Link to="/ssomar-tools" className="">
                     <div className="button-color-change-interaction">&nbsp;</div>BACK
                 </Link>
