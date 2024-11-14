@@ -1,4 +1,4 @@
-import { useContext, useState} from "react"
+import { useContext} from "react"
 import { CurrentBoxCountContext, InputBoxValuesContext } from "../RandomRun"
 
 type Props = {
@@ -7,31 +7,45 @@ type Props = {
 }
 
 export const CommandInputBox = ({id, onClickFunction}: Props) => {
-
+    // Used to check how many command input boxes are there so the commmand input box would know whether to show/hide the delete button
     const numberOfInputBoxes = useContext(CurrentBoxCountContext)
+    // Mainly here just to update its values in the input box values context when changes are made in each individual command input box
     const inputBoxValuesProperties = useContext(InputBoxValuesContext)
     
     const handleRateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        // Create new empty array
         let newRateValues: number[] = []
+        // Push all of those elements to the new array
+        // Q: Why even do this when you can just directly make a copy?
+        // A: Typescript is complaining about potential null values
         inputBoxValuesProperties.rateValues?.forEach((val) => {
             newRateValues.push(val)
         })
+
+        // Finds the correct index of where this command input box's rate value would be. Then updates the value of it
+        // with the new value of the command input box per onChange event
         newRateValues[
             inputBoxValuesProperties.inputBoxIdList != null ? inputBoxValuesProperties.inputBoxIdList.indexOf(id) : 0 
         ] = Number.parseInt(event.target.value)
 
+        // Replaces the old one with the new one
         inputBoxValuesProperties.setRateValues(newRateValues)
     }
 
     const handleCommandChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+        // Create new empty array
         let newCommandValues: string[] = []
+        // Push all of those elements to the new array
         inputBoxValuesProperties.commandValues?.forEach((val) => {
             newCommandValues.push(val)
         })
+        // Finds the correct index of where this command input box's rate value would be. Then updates the value of it
+        // with the new value of the command input box per onChange event
         newCommandValues[
             inputBoxValuesProperties.inputBoxIdList != null ? inputBoxValuesProperties.inputBoxIdList.indexOf(id) : 0 
         ] = event.target.value 
 
+        // Replaces the old one with the new one
         inputBoxValuesProperties.setCommandValues(newCommandValues)
     }
 

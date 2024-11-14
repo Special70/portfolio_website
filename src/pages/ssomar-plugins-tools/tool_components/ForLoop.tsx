@@ -18,7 +18,7 @@ export const ForLoop = () => {
     // Value Increase Per Iteration input box's default value is based on this
     const [valueIncreasePerIteration, setValueIncreasePerIteration] = useState<string | number>("5")
     // This lets the code know how many iterations should it perform
-    const [numberOfIterations, setNumberOfIterations] = useState(0)
+    const [numberOfElements, setNumberOfElements] = useState(0)
     // Stores the output-to-be-displayed in the textarea element
     const [outputDisplay, setOutputDisplay] = useState("")
 
@@ -26,7 +26,7 @@ export const ForLoop = () => {
     function writeOutput() {
         
         // Prevent output if :
-        if (numberOfIterations <= 0) {return} /* Number of iterations is 0 or less */
+        if (numberOfElements <= 0) {return} /* Number of iterations is 0 or less */
         /* String length of either startingValue or valueIncreasePerIteration is 0 when inputType is string */
         if (inputType == "String") {
             if (String(startingValue).length <= 0) {
@@ -63,7 +63,7 @@ export const ForLoop = () => {
         outputArray.push(startingValue)
         
         // Start iteration
-        for (let i = 1; i < numberOfIterations; i++) {
+        for (let i = 1; i < numberOfElements; i++) {
             // Performs a value append/increase depending on the input type
             if (inputType == "String") {
                 outputBuilderVar += String(valueIncreasePerIteration)
@@ -104,6 +104,8 @@ export const ForLoop = () => {
                         }
                         // Sets the number value to the startingValue variable 
                         setStartingValue(Number.parseInt(event.target.value))
+                        // Mainly to remove the excess zeroes when typing a number input
+                        event.target.value = String(Number(event.target.value))
                     } else if (inputType == "String") {
                         // Sets the string value to the startingValue variable
                         setStartingValue(event.target.value);
@@ -119,20 +121,24 @@ export const ForLoop = () => {
                         }
                         // Sets the number value to the valueIncreasePerIteration variable
                         setValueIncreasePerIteration(Number.parseInt(event.target.value))
+                        // Mainly to remove the excess zeroes when typing a number input
+                        event.target.value = String(Number(event.target.value))
                     } else if (inputType == "String") {
                         // Sets the string value to the valueIncreasePerIteration variable
                         setValueIncreasePerIteration(event.target.value);
                     }
                 }}/>
 
-                <span className="text-white">Number of Iterations to perform: </span>
-                <input type="number" className="pl-2 mr-2" placeholder="Enter number value" defaultValue={numberOfIterations} onChange={(event) => {
+                <span className="text-white">Number of Elements: </span>
+                <input type="number" className="pl-2 mr-2" placeholder="Enter number value" defaultValue={numberOfElements} onChange={(event) => {
                     // If the number that is being submitted is lower than 0 or number is NaN, forcefully change the value to 0.
                     if (Number.parseInt(event.target.value) < 0 || isNaN(Number.parseInt(event.target.value))) {
                         event.target.value = "0"
                     }
-                    // Sets the number of iterations value 
-                    setNumberOfIterations(Number.parseInt(event.target.value))
+                    // Sets the number of elements value 
+                    setNumberOfElements(Number.parseInt(event.target.value))
+                    // Mainly to remove the excess zeroes when typing a number input
+                    event.target.value = String(Number(event.target.value))
                     
                     }} />
             </div>
