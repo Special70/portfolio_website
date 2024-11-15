@@ -7,6 +7,6 @@
     viewport<=910px:min-w-96
   }
   .ssomar-tools-button-notActive {
-    @apply font-minecraft text-5xl text-center block mt-20 ml-auto mr-auto bg-white text-black w-1/5 border-2 border-gray-700 w-1/3 max-w-72 pl-2 pr-2 
+    @apply font-minecraft text-5xl text-center block mt-20 ml-auto mr-auto bg-white text-black w-1/5 border-2 border-gray-700 max-w-72 pl-2 pr-2 
     min-w-48;
   }

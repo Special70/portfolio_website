@@ -1,0 +1,15 @@
+.responsive-text-small {
+    font-size: clamp(1rem, 1vw + 1rem, 2rem);
+}
+
+.responsive-text-regular {
+    font-size: clamp(2rem, 2vw + 2rem, 3rem);
+}
+
+.responsive-text-large {
+    font-size: clamp(2rem, 4vw + 2rem, 6rem);
+}
+
+.responsive-flex-direction {
+    @apply flex flex-row viewport<=910px:flex-col
+}

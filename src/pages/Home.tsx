@@ -11,7 +11,7 @@ export const Home = () => {
         </div>
         <hr className="bg-black h-1 mt-10"/>
             <div className="bg-white p-5">
-                <span className="text-center text-5xl block">Hello to my website</span><br></br>
+                <span className="text-center text-5xl block font-host-grotesk">Hello to my website</span><br></br>
                 <p className="text-center block text-3xl">This website mainly showcases my capability as a website developer and sometimes for personal use. <br />Expect regular updates in this website</p>
             </div>
         <hr className="bg-black h-1"/>
