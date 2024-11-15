@@ -1,17 +1,22 @@
-import { useState } from 'react';
 
 const MyComponent = () => {
 
   return (
-    <div className="mt-10">
+    <>
+    <div className="border-4 border-black w-1/4 block m-auto text-center mt-5 relative">
+      <div className="bg-slate-500 w-full h-full absolute opacity-0 hover:opacity-100 hover:ml-50">Ha</div>
+      test
+    </div>
+    <div className="relative flex flex-row group">
+      <div className="p-4 bg-blue-500 text-white rounded-lg">
+        Hover over me
+      </div>
 
-    <button data-tooltip-target="tooltip-light" data-tooltip-style="light" type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Light tooltip</button>
-    
-    <div id="tooltip-light" role="tooltip" className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 tooltip">
-        Tooltip content
-        <div className="tooltip-arrow" data-popper-arrow></div>
+      <div className="mb-2 ml-2 hidden group-hover:block bg-gray-800 text-white text-sm rounded-lg px-3 py-2 whitespace-nowrap place-self-center">
+        This is the tooltip text
+      </div>
     </div>
-    </div>
+    </>
   );
 };
 

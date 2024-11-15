@@ -33,13 +33,13 @@ export const SCore_Editor = () => {
         </div>
         <div className="mt-20">&nbsp;</div> {/*Moves the rest of the components downwards a bit*/}
         <div className="font-minecraft text-5xl text-white bg-gradient-to-r from-sky-500 to-blue-800 text-center p-5 border-b-8 border-blue-500 fixed w-screen z-50 top-0">SCore Commands Editor</div>
-            <div className="w-4/5 m-auto bg-black border-8 border-blue-900 h-screen max-h-px300 p-10 flex flex-row">
-                <div className="bg-slate-400 w-1/5 p-4 m-4 border-4 border-blue-900">
-                    <SCore_Editor_ButtonManager />
-                </div>
-                <div className="w-4/5 bg-slate-900 m-4 border-4 border-blue-900 relative overflow-auto" id="SCore_Editor_Interface">
-                    <SCore_Editor_Interface />
-                </div>
+        <div className="w-4/5 m-auto bg-black border-8 border-blue-900 h-screen max-h-px300 p-10 flex flex-row">
+            <div className="bg-slate-400 w-1/5 p-4 m-4 border-4 border-blue-900">
+                <SCore_Editor_ButtonManager />
+            </div>
+            <div className="w-4/5 bg-slate-900 m-4 border-4 border-blue-900 relative overflow-auto" id="SCore_Editor_Interface">
+                <SCore_Editor_Interface />
+            </div>
         </div>
         </CurrentTooolContext.Provider>
         

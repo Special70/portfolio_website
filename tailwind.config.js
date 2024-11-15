@@ -11,10 +11,16 @@ module.exports = {
         'viewport>1000px': {min: '1001px'}
       },
       width : {
-        '910px': '910px'
+        '910px': '910px',
+        '500': '125rem',
+        '400': '100rem',
+        '300': '75rem',
+        '200': '50rem',
+        '100': '25rem',
       },
       spacing: {
-        '910px': '910px'
+        '910px': '910px',
+        '50': '12.5rem'
       }
     },
     fontFamily: {

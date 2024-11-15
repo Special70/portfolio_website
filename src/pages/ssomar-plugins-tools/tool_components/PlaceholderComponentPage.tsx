@@ -14,7 +14,7 @@ export const PlaceholderComponentPage = () => {
         // The purpose of the second message is to remind the user that the selected tool isn't available yet 
             // (This scenario only occurs if the developer makes more buttons but hasn't made a case statemet in the switch block (see SCore_Editor_Interface.tsx) )
         <div className="w-full h-full bg-gray-700 text-6xl text-white text-center items-center font-minecraft p-10">
-            {currentToolToDisplay.currentToolMenu == undefined ? "Please select an option at the left side to open an editor to use" : "This feature has yet to be developed. Please select a different tool for now."}
+            {currentToolToDisplay.currentToolMenu == undefined ? "Please select an option at the left side to open an editor to use. Hover at each button for more information" : "This feature has yet to be developed. Please select a different tool for now."}
         </div>
         
     )
