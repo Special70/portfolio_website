@@ -69,7 +69,7 @@ export const YawPitchOffset = () => {
 
         <hr className="h-2 mb-2 bg-blue-800 w-full border-1 border-black" />
             <span className="text-white text-5xl block text-center font-minecraft">Output</span>
-            <textarea value={outputText} className="w-4/5 block m-auto border-4 border-blue-500 bg-white text-black font-minecraft text-2xl h-1/3 leading-5 pl-2 pt-2" readOnly 
+            <textarea value={outputText} className="w-4/5 block m-auto border-4 mb-10 border-blue-500 bg-white text-black font-minecraft text-2xl h-1/3 leading-5 pl-2 pt-2" readOnly 
                 placeholder="Output is displayed here"
                 />
         </>

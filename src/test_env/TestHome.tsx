@@ -1,6 +1,9 @@
 import ssomarPluginsToolsBgImg from '../assets/images/ssomar-tools-website_background-image.png';
 import ssomarPluginsToolsImg from '../assets/images/ssomar-tools-website_header-image.png'
 import profilePicture from '../assets/images/home-page/profile.jpg';
+import ghub_repo_1 from '../assets/images/home-page/ghub-repo-1.png'
+import ghub_repo_2 from '../assets/images/home-page/ghub-repo-2.png'
+import ghub_repo_3 from '../assets/images/home-page/ghub-repo-3.png'
 import { Link } from 'react-router-dom';
 
 export const TestHome = () => {
@@ -35,9 +38,44 @@ export const TestHome = () => {
         <hr className="bg-black h-1"/>
 
         <div className="w-4/5 bg-slate-900 m-auto block mt-20 mb-20 border-2 border-white">
+        
             {/*Github Repos*/}
             <div>
                 <div className="text-center text-responsive-regular text-white font-host-grotesk">Github Repositories</div>
+                <div className="w-auto ml-10 mr-10 mb-5 mt-5 grid-cols-2 grid-rows-2 grid viewport<=910px:grid-cols-1 viewport<=910px:grid-rows-4 border-2 border-slate-500">
+                    <div className="text-center pl-2 pr-2">
+                        <span className="text-responsive-regular font-host-grotesk text-white">Ssomar Plugins Tools</span>
+                        <hr className="bg-slate-100 h-1 w-3/4 m-auto border-0 mb-3" />
+                        <img src={ghub_repo_1} className="w-2/3 m-auto shadow-lg shadow-black mb-4 transition ease-in-out hover:scale-105 cursor-pointer" onClick={()=>{
+                            const url = "https://github.com/Special70/java___Ssomar_Plugins_Tools"; // Replace with your desired URL
+                            window.open(url, "_blank", "noopener,noreferrer");
+                        }}/>
+                        <hr className="bg-slate-100 h-1 w-3/4 m-auto border-0" />
+                        <span className="text-responsive-small font-host-grotesk text-white">A Javax Swing based project that mainly features options that deals with modifying item config. This project showcases my capability in writing GUI-based programs and writing sizeable projects</span>
+                    </div>
+                    <div className="text-center pl-2 pr-2">
+                        <span className="text-responsive-regular font-host-grotesk text-white">Food App Simulator</span>
+                        <hr className="bg-slate-100 h-1 w-3/4 m-auto border-0 mb-3" />
+                        <img src={ghub_repo_2} className="w-2/3 m-auto shadow-lg shadow-black mb-4 transition ease-in-out hover:scale-105 cursor-pointer" onClick={()=>{
+                            const url = "https://github.com/Special70/python___Sample-Food-Ordering-Program"; // Replace with your desired URL
+                            window.open(url, "_blank", "noopener,noreferrer");
+                        }}/>
+                        <hr className="bg-slate-100 h-1 w-3/4 m-auto border-0" />
+                        <span className="text-responsive-small font-host-grotesk text-white">A Python console-based project that relies on keyboard inputs to perform actions. This project showcases my capability in writing very complex code and being able to work around with visual limitations in a console-based program</span>
+                    </div>
+                    <div className="text-center pl-2 pr-2">
+                        <hr className="bg-slate-100 h-1 w-full m-auto border-0 mb-3" />
+                        <span className="text-responsive-regular font-host-grotesk text-white">Console Turn-Based Game</span>
+                        <hr className="bg-slate-100 h-1 w-3/4 m-auto border-0 mb-3" />
+                        <img src={ghub_repo_3} className="w-2/3 m-auto shadow-lg shadow-black mb-4 transition ease-in-out hover:scale-105 cursor-pointer" onClick={()=>{
+                            const url = "https://github.com/Special70/python___Turn-Based-Game"; // Replace with your desired URL
+                            window.open(url, "_blank", "noopener,noreferrer");
+                        }}/>
+                        <hr className="bg-slate-100 h-1 w-3/4 m-auto border-0" />
+                        <span className="text-responsive-small font-host-grotesk text-white">A Python console-based project that accepts keyboard hits for inputs while having its keybinds configurable. This project showcases my capability in writing systems such as simple opponent AI by randomizing potential enemy choice while considering conditions and supports 2-player gaming. This program is also written in a way where it's easy to create new skills and effects and give them cooldowns too.</span>
+                    </div>
+
+                </div>
             </div>
         </div>
 

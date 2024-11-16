@@ -129,7 +129,7 @@ export const RandomRun = () => {
 
 
     return (
-        <div className="border-4 border-blue-500 absolute w-full h-full">
+        <div className="border-4 border-blue-500 w-full h-screen">
         <div>
             <button className="text-3xl text-black font-minecraft bg-white m-4 border-4 border-blue-800 relative" onClick={() => addBox()}>
                 <div className={`button-color-change-interaction_forWhiteBG`}>&nbsp;</div>

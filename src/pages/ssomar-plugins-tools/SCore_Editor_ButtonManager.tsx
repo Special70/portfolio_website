@@ -24,13 +24,13 @@ export const SCore_Editor_ButtonManager = () => {
     const changeMenu = (id: string) => {currentToolVar.setCurrentToolMenu(id)}
 
     return (
-        <div>
+        <div className="flex flex-col viewport<=1200px:flex-row gap-2 overflow-hidden viewport<=1200px:overflow-x-scroll">
             {/* Iterates through the buttonList variable */}
             {buttonList.map((item, index) => { // item : button name; index: index;
                 // Then creates a button tag with the necessary features:
                 return (
-                    <div className="relative flex flex-row group">
-                        <button key={index} className={
+                    <div className="relative flex flex-row group" key={index}>
+                        <button className={
                         // Checks if this is really the selected button. Normal buttons would have the "score_button" class but if the button is the selected one, it would have the "score_button-selected" class.
                         // Q : How is a button selected code-wise ?
                         // A : Each button made from the buttonList variable would have their own changeMenu() function where their button name is passed to it. 
@@ -41,9 +41,9 @@ export const SCore_Editor_ButtonManager = () => {
                             changeMenu(JSON.stringify(index)) 
                         }>
                             <div className="button-color-change-interaction">&nbsp;</div>
-                            {item[0]}</button>
+                            <span className="p-2">{item[0]}</span></button>
                             
-                        <div className="mb-2 left-full ml-5 p-5 hidden group-hover:block bg-slate-800 text-white font-minecraft text-5xl w-200 absolute z-20">
+                        <div className="mb-2 left-full viewport<=1200px:top-full viewport<=1200px:-left-3/4 ml-5 p-5 hidden group-hover:block bg-slate-800 text-white font-minecraft text-responsive-small w-2full absolute z-20">
                         {item[1]}
                         </div>
                     </div>

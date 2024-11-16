@@ -88,7 +88,7 @@ export const ForLoop = () => {
     return (
         
         <>
-            <div className="grid grid-cols-2 grid-rows-4 m-4 font-minecraft text-5xl gap-4">
+            <div className="grid grid-cols-2 grid-rows-4 m-4 font-minecraft text-responsive-regular gap-4">
                 <span className="text-white">Input Type: </span>
                 <select className="pl-2 mr-2" onChange={(event) => {setInputType(event.target.value)}}>
                     <option>Number</option>
@@ -111,8 +111,7 @@ export const ForLoop = () => {
                         setStartingValue(event.target.value);
                     }
                 }}/>
-
-                <span className="text-white">Value Increase per Iteration: </span>
+                <span className="text-white leading-relaxed">Value Increase per Iteration: </span>
                 <input defaultValue={valueIncreasePerIteration} type={inputType == "Number" ? "number" : "text"} className="pl-2 mr-2" placeholder={inputType == "Number" ? "Enter number value" : "Enter string value"} onChange={(event) => {
                     if (inputType == "Number") {
                         // If the number that is being submitted is lower than 0 or number is NaN, forcefully change the value to 0.
@@ -144,7 +143,7 @@ export const ForLoop = () => {
             </div>
             <hr className="h-2 mb-2 bg-blue-800 w-full border-1 border-black" />
             <span className="text-white text-5xl block text-center font-minecraft">Output</span>
-            <textarea className="w-4/5 block m-auto border-4 border-blue-500 bg-white text-black font-minecraft text-2xl h-1/3 leading-5 pl-2 pt-2" readOnly 
+            <textarea className="w-4/5 block m-auto border-4 mb-10 border-blue-500 bg-white text-black font-minecraft text-2xl h-1/3 leading-5 pl-2 pt-2" readOnly 
                 placeholder="Output is displayed here"
                 value={outputDisplay}/>
         </>

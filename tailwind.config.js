@@ -8,7 +8,8 @@ module.exports = {
       screens: {
         'viewport<=910px': {max: '910px'},
         'viewport<=1000px': {max: '1000px'},
-        'viewport>1000px': {min: '1001px'}
+        'viewport<=1200px': {max: '1200px'},
+        'viewport>1000px': {min: '1001px'},
       },
       width : {
         '910px': '910px',
@@ -17,6 +18,7 @@ module.exports = {
         '300': '75rem',
         '200': '50rem',
         '100': '25rem',
+        '2full': '200%',
       },
       spacing: {
         '910px': '910px',
