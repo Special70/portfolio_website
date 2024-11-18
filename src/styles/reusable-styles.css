@@ -1,3 +1,7 @@
 .responsive-flex-direction {
     @apply flex flex-row viewport<=910px:flex-col
 }
+
+.hover-button-increase {
+    @apply transition ease-in-out hover:scale-105 cursor-pointer
+}

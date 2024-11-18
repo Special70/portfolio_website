@@ -4,8 +4,7 @@ import EILogo from '../../assets/images/ssomar-tools-website/ExecutableItems.jpg
 import EBLogo from '../../assets/images/ssomar-tools-website/ExecutableBlocks.jpg'
 import EELogo from '../../assets/images/ssomar-tools-website/ExecutableEvents.jpg'
 
-import { Link, useLocation } from 'react-router-dom'
-import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 export const SsomarPluginsTools = () => {
 

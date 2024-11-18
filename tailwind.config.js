@@ -29,6 +29,9 @@ module.exports = {
         'responsive-regular': 'clamp(2rem, 2vw + 2rem, 3rem)',
         'responsive-large': 'clamp(2rem, 4vw + 2rem, 6rem)',
       },
+      backgroundImage: {
+        "programmer": "url('/src/assets/images/home-page/background.jpg')"
+      }
     },
     fontFamily: {
       'minecraft': ['minecraft'],
