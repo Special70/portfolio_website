@@ -1,10 +1,10 @@
 
-import profilePicture from '../assets/images/home-page/profile.jpg';
+import profilePicture from '../assets/images/home-page/profile.png';
 import stockimg000 from '../assets/images/home-page/stockimg000.png'
 import { Home_SsomarPluginsTools } from './homepage-components/Home_SsomarPluginsTools';
 import { Home_GithubRepos } from './homepage-components/Home_GithubRepos';
 import { Home_SocialLinks } from './homepage-components/Home_SocialLinks';
-import { Home_UnseriousRolldown } from './homepage-components/Home_UnseriousRolldown';
+//import { Home_UnseriousRolldown } from './homepage-components/Home_UnseriousRolldown';
 
 export const Home = () => {
 
@@ -15,13 +15,14 @@ export const Home = () => {
         {/*Header Bar*/}
         <div className="bg-gradient-to-r from-slate-800 to-slate-900 pb-2 pt-1 text-center font-minecraft sticky top-0 z-50 h-20 flex justify-between w-full shadow-lg shadow-black">
             &nbsp;
-            <div className="text-responsive-regular pr-10 pl-10 text-white hover:scale-110 transition hover:cursor-pointer active:scale-100"
+            {/*<div className="text-responsive-regular pr-10 pl-10 text-white hover:scale-110 transition hover:cursor-pointer active:scale-100"
             onClick={()=>{
                 document.getElementById("unserious")?.classList.toggle('-translate-y-[200%]')    
             }}
             >
                 Tired of formal portfolios? Click Here!
-            </div>
+                
+            </div>*/}
             <div>
                 <div className="flex flex-row">
                     <div className="relative group">
@@ -103,9 +104,9 @@ export const Home = () => {
                 </div>
             </div>
         </div>
-        <div className="inset-0 items-center justify-center z-50 absolute -top-40 w-full"> 
+        {/*<div className="inset-0 items-center justify-center z-50 absolute -top-40 w-full"> 
             <Home_UnseriousRolldown />
-        </div>
+        </div>*/}
 
         <hr className="bg-black h-1 mt-10"/>
         <header className="relative z-20">
@@ -114,7 +115,7 @@ export const Home = () => {
                     <img src={profilePicture} className="w-1/2 self-center m-auto rounded-3xl shadow-lg shadow-black" />
                 </div>
                 <div className="w-full text-center pl-2 pr-2 self-center mb-10 ">
-                    <span className="text-white font-host-grotesk text-responsive-regular">Special70</span>
+                    <span className="text-white font-host-grotesk text-responsive-regular">Josef Miko Urquico</span>
                     <hr className="bg-black h-1"/>
                     <span className="text-white font-host-grotesk text-responsive-small">
                         Hello! I'm mainly a programmer who can work with multiple programming languages. I'm also into drawing and gaming
