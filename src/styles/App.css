@@ -15,4 +15,8 @@
   font-family: "host-grotesk";
   src: url("../fonts/host-grotesk.ttf")
 }
+@font-face {
+  font-family: "comic-sans";
+  src: url("../fonts/comic-sans.ttf")
+}
 }

@@ -22,7 +22,8 @@ module.exports = {
       },
       spacing: {
         '910px': '910px',
-        '50': '12.5rem'
+        '50': '12.5rem',
+        '100': '25rem',
       },
       fontSize: {
         'responsive-small': 'clamp(1rem, 1vw + 1rem, 2rem)',
@@ -37,6 +38,7 @@ module.exports = {
       'minecraft': ['minecraft'],
       'open-sans': ['open-sans'],
       'host-grotesk': ['host-grotesk'],
+      'comic-sans': ['comic-sans'],
     }
   },
   plugins: []

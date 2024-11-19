@@ -1,17 +1,20 @@
-import pic_ricardo_milos from '../assets/images/home-page/unserious_assets/ricardo-milos.jfif'
-import profilepic from '../assets/images/home-page/unserious_assets/profile.png'
-import woman_squarehole from '../assets/images/home-page/unserious_assets/squarehole.png'
-import feixiao from '../assets/images/home-page/unserious_assets/would.webp'
-import technoblade from '../assets/images/home-page/unserious_assets/technoblade.jpg'
-import terraria from '../assets/images/home-page/unserious_assets/terraria.jpg'
-import myDrawing from '../assets/images/home-page/unserious_assets/mydrawing.png'
-import passenger from '../assets/images/home-page/unserious_assets/passenger.jfif'
-import gabriel from '../assets/images/home-page/unserious_assets/gabriel.webp'
-import chainedSoldier from '../assets/images/home-page/unserious_assets/chained_soldier.webp'
+import pic_ricardo_milos from '../../assets/images/home-page/unserious_assets/ricardo-milos.jfif'
+import profilepic from '../../assets/images/home-page/unserious_assets/profile.png'
+import woman_squarehole from '../../assets/images/home-page/unserious_assets/squarehole.png'
+import feixiao from '../../assets/images/home-page/unserious_assets/would.webp'
+import technoblade from '../../assets/images/home-page/unserious_assets/technoblade.jpg'
+import terraria from '../../assets/images/home-page/unserious_assets/terraria.jpg'
+import myDrawing from '../../assets/images/home-page/unserious_assets/mydrawing.png'
+import passenger from '../../assets/images/home-page/unserious_assets/passenger.jfif'
+import gabriel from '../../assets/images/home-page/unserious_assets/gabriel.webp'
+import chainedSoldier from '../../assets/images/home-page/unserious_assets/chained_soldier.webp'
 
-export const TestHome = () => {
+
+export const Home_UnseriousRolldown = () => {
     return (
-    <div className="w-4/5 m-auto block z-50">
+        <>
+        
+    <div className="w-4/5 m-auto block z-50 self-center top-0 transition-transform duration-700 ease-in-out" id="unserious">
         <div className="bg-yellow-300 w-auto h-100 relative flex flex-row border-l-8 border-r-8 border-slate-500">
             <img src={pic_ricardo_milos} className="h-auto w-auto" />
             <span className="font-comic-sans text-responsive-small">Tired of boring portfolio pages? have this instead</span>
@@ -97,11 +100,18 @@ export const TestHome = () => {
         </div>
         <hr className="bg-black h-5 w-4/5 m-auto border-l-8 border-r-8 border-slate-500 border-t-0 border-b-0" />
         <div className="bg-red-200 h-auto p-10">
-            <button className="w-3/5 bg-white border-4 border-red-800 text-responsive-regular block m-auto transition opacity-100 hover:scale-110 active:scale-100 duration-300 ">
+            <button className="w-3/5 bg-white border-4 border-red-800 text-responsive-regular block m-auto transition opacity-100 hover:scale-110 active:scale-2000 duration-300 "
+            onClick={()=>{
+                document.getElementById("top")?.scrollIntoView({ behavior: 'smooth' });
+                setTimeout(() => {
+                    document.getElementById("unserious")?.classList.toggle('-translate-y-[200%]')                    
+                }, 1000);
+
+            }}>
                 I've seen enough. Close this rolldown
             </button>
         </div>
     </div>
-
+        </>
     )
 }
