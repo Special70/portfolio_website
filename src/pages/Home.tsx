@@ -118,7 +118,7 @@ export const Home = () => {
                     <span className="text-white font-host-grotesk text-responsive-regular">Josef Miko Urquico</span>
                     <hr className="bg-black h-1"/>
                     <span className="text-white font-host-grotesk text-responsive-small">
-                        Hello! I'm mainly a programmer who can work with multiple programming languages. I'm also into drawing and gaming
+                        Hello! I'm a programmer from the Philippines. I can learn things like frameworks and other programming languages and play around with its features. I'm also into drawing and gaming
 
                     </span>
                 </div>
