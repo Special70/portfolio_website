@@ -5,7 +5,7 @@ import ssomarPluginsToolsImg from '../../assets/images/ssomar-tools-website_head
 export const Home_SsomarPluginsTools = () => {
     return (
         <div className="w-auto flex flex-col pb-4 relative z-20">
-            <img src={ssomarPluginsToolsBgImg} className="-z-10 h-full opacity-20 absolute" />
+            <img src={ssomarPluginsToolsBgImg} className="-z-10 h-full opacity-20 absolute w-full" />
             <div className="text-center font-minecraft text-responsive-large text-white" id="ssomar-plugins-tools">
                 <div className="absolute -top-20" id="anchor_ssomar-plugins-tools-website">&nbsp;</div> {/*For proper view when scrolling down*/}
                 Ssomar Plugins Tools

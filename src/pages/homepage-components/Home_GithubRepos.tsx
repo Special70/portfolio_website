@@ -54,9 +54,9 @@ export const Home_GithubRepos = () => {
     </div>
     
     <div className="absolute -z-10 w-full top-0 h-full opacity-40">
-        <img src={stockimg002} className="h-1/3" />
-        <img src={stockimg003} className="h-1/3" />
-        <img src={stockimg004} className="h-1/3" />
+        <img src={stockimg002} className="h-1/3 w-full" />
+        <img src={stockimg003} className="h-1/3 w-full" />
+        <img src={stockimg004} className="h-1/3 w-full" />
     </div>
     <div className="absolute -z-10 h-full w-full opacity-90 top-0 bg-slate-900" />
 </div></>
