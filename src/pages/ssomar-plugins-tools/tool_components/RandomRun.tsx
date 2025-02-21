@@ -38,6 +38,14 @@ export const RandomRun = () => {
             />
     )})
 
+    // needs fixing
+    function resetRateValues() {
+        let rateValuesLength: any = rateValues?.length
+        for (let i = 0; i < rateValuesLength; i++) {
+            removeItem(rateValues, i)
+        }
+    }
+
     // Used to correctly delete the target command input box
     function deleteBox(id: number) {
         const targetIndex = inputBoxIdList.indexOf(id)
@@ -87,7 +95,7 @@ export const RandomRun = () => {
     
     const OutputFormatter_RandomRun = () => {
         // Main variable for building the desired text to print
-        let mainReturnTextBuilder = ""
+        let mainReturnTextBuilder = "    - 'RANDOM RUN: 1'\n"
         
         inputBoxIdList?.map((obj, index) => {
             // To make the compiler shut up when building the app
@@ -107,11 +115,22 @@ export const RandomRun = () => {
             }
 
             // Uses an array to easily "design" the text to print
+            /*
             const returnText = [
                 `    - 'RANDOM RUN: ${inputRate}'\n`,
                 `    - ${inputCommand}\n`,
                 `    - RANDOM END\n`
+            ]*/ 
+            // TEMP COMMENT
+
+            // DELETE LATER ======================
+            const returnText = [
+                `    - 'LOOP START ${inputRate}'\n`,
+                `    - ${inputCommand}\n`,
+                `    - LOOP END\n`
             ]
+            // DELETE LATER ======================
+
             // Starts building the text
             for (let i = 0; i < returnText.length; i++) {
                 returnTextBuilder += returnText[i]
@@ -120,7 +139,11 @@ export const RandomRun = () => {
             // Adds the finished text to the main text variable
             mainReturnTextBuilder += returnTextBuilder
             
+            
         })
+
+        // Mainly to close the text format
+        mainReturnTextBuilder += "    - RANDOM END"
         // Returns the finished product
         return (mainReturnTextBuilder)
         
@@ -156,7 +179,7 @@ export const RandomRun = () => {
         <hr className="h-2 mb-2 bg-blue-800 w-full border-1 border-black" />
         <div className="flex flex-row">
         
-            <button className="text-3xl text-black font-minecraft bg-white m-4 border-4 border-blue-800 relative">
+            <button onClick={resetRateValues} className="text-3xl text-black font-minecraft bg-white m-4 border-4 border-blue-800 relative">
                 <div className={`button-color-change-interaction_forWhiteBG`}>&nbsp;</div>
                 <span className="pl-2 pr-1">Reset Rate Fields</span>
             </button>
