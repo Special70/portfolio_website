@@ -11,8 +11,7 @@ import { SsomarPluginsTools } from './pages/ssomar-plugins-tools/SsomarPluginsTo
 import {HashRouter, Route, Routes, useLocation} from 'react-router-dom'
 import { Error404_Page } from './pages/Error404_Page';
 import { SCore_Editor } from './pages/ssomar-plugins-tools/SCore_Editor';
-import MyComponent from './test_env/TestArea';
-import { TestHome } from './test_env/TestHome';
+import { Blogsite } from './pages/schoolworks/blogsite/Blogsite';
 
 // For moving the website view to the topmost of the page everytime the component changes
 function ScrollToTop() {
@@ -36,8 +35,7 @@ root.render(
       <Route path="/" element={<Home />} />
       <Route path="/ssomar-tools" element={<SsomarPluginsTools />} />
       <Route path="/ssomar-tools/score" element={<SCore_Editor />} />
-      <Route path="/test" element={<MyComponent />} />
-      <Route path="/testhome" element={<TestHome />} />
+      <Route path="/blogsite" element={<Blogsite />} />
       <Route path="*" element={<Error404_Page />} />
     </Routes>
   </HashRouter>

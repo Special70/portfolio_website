@@ -13,6 +13,7 @@ module.exports = {
       },
       width : {
         '910px': '910px',
+        '800px': '800px',
         '500': '125rem',
         '400': '100rem',
         '300': '75rem',
@@ -26,9 +27,9 @@ module.exports = {
         '100': '25rem',
       },
       fontSize: {
-        'responsive-small': 'clamp(1rem, 1vw + 1rem, 2rem)',
-        'responsive-regular': 'clamp(2rem, 2vw + 2rem, 3rem)',
-        'responsive-large': 'clamp(2rem, 4vw + 2rem, 6rem)',
+        'responsive-small': 'clamp(1vw,2vw,1.2rem)',
+        'responsive-regular': 'clamp(2vw,2vw,1.2rem)',
+        'responsive-large': 'clamp(3vw,2vw,3rem)',
       },
       backgroundImage: {
         "programmer": "url('/src/assets/images/home-page/background.jpg')"

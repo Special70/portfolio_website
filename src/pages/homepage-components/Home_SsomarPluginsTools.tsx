@@ -6,9 +6,9 @@ export const Home_SsomarPluginsTools = () => {
     return (
         <div className="w-auto flex flex-col pb-4 relative z-20">
             <img src={ssomarPluginsToolsBgImg} className="-z-10 h-full opacity-20 absolute w-full" />
-            <div className="text-center font-minecraft text-responsive-large text-white" id="ssomar-plugins-tools">
-                <div className="absolute -top-20" id="anchor_ssomar-plugins-tools-website">&nbsp;</div> {/*For proper view when scrolling down*/}
-                Ssomar Plugins Tools
+            <div className="text-center font-minecraft text-white" id="ssomar-plugins-tools">
+                <div className="absolute -top-20 " id="anchor_ssomar-plugins-tools-website">&nbsp;</div> {/*For proper view when scrolling down*/}
+                <span className="text-responsive-large">Ssomar Plugins Tools</span>
             </div>
             <div className="responsive-flex-direction">
                 <div className="w-2/5 viewport<=910px:w-4/5 p-5 ml-5 ssomar-tools-section-screen-settings-loadout">
